@@ -92,7 +92,10 @@ class Main extends Component {
           });
 
       renderMenuItem = ({item, index}) => {
-
+        const { navigate } = this.props.navigation;
+        const character = {
+          carId : item.id
+        }
         return (
                 <ListItem
                     key={index}
@@ -100,7 +103,7 @@ class Main extends Component {
                     subtitle={item.description}
                     hideChevron={true}
                     leftAvatar={{ source: require('./carsImages/Roadster.jpg')}}
-                    // onPress={() => navigate('Cardetail', { carId: item.id })}
+                    onPress={() => navigate('Details', { item: character })}
                   />
         );
     };
