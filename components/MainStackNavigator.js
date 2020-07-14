@@ -8,10 +8,10 @@ import Home from './HomeScreen';
 const Stack = createStackNavigator()
 export default function MainStackNavigator() {
     return (
-      <NavigationContainer>
+     // <NavigationContainer>
 
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
+      <Stack.Navigator initialRouteName="Main">
+       
         <Stack.Screen
             name='Main'
             component={Main}
@@ -19,30 +19,6 @@ export default function MainStackNavigator() {
           />
         <Stack.Screen name="Details" component={CarDetails} />
       </Stack.Navigator>
-    
-
-
-        {/* <Stack.Navigator initialRouteName='Details' >
-
-<Stack.Screen
-            name='Home'
-            component={Home}
-            options={{ title: 'Home Screen' }}
-          />
-
-        <Stack.Screen
-            name='Main'
-            component={Main}
-            options={{ title: 'All cars' }}
-          />
-          
-       <Stack.Screen
-            name='Details'
-            component={CarDetails}
-            options={{ title: 'Car Details' }}
-          />
-       
-        </Stack.Navigator> */}
-      </NavigationContainer>
+//</NavigationContainer>
     )
   }
