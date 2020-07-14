@@ -49,17 +49,29 @@ class CarDetails extends Component
                 return(
                     <Card
                         featuredTitle = {car.name}
-                        image = {require('./carsImages/Roadster.jpg')}
+                        image = {car.image}
                      >
                         <Text style={{margin: 10}}>
                                 {car.description}
                         </Text>
                         <Text style={{margin: 10}}>
-                                {car.body_style}
+                                {"Body Style\t:\t"+car.body_style}
                         </Text>
                         <Text style={{margin: 10}}>
-                                {car.engines}
+                                {"Engine\t:\t"+car.engines}
+
                         </Text>
+
+                        <Text style={{margin: 10}}>
+                                {"Generations\t:\t"+car.generations}
+
+                        </Text>
+
+                        <Text style={{margin: 10}}>
+                                {"Segment\t:\t"+car.segment}
+
+                        </Text>
+
                      </Card>
                 );
             }

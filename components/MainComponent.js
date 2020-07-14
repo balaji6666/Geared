@@ -100,9 +100,9 @@ class Main extends Component {
                 <ListItem
                     key={index}
                     title={item.name}
-                    subtitle={item.description}
+                    subtitle={"Engine : "+item.engines+"\t Segment : "+ item.segment}
                     hideChevron={true}
-                    leftAvatar={{ source: require('./carsImages/Roadster.jpg')}}
+                    leftAvatar={{ source: item.image}}
                     onPress={() => navigate('Details', { item: character })}
                   />
         );
